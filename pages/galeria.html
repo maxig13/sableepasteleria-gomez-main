@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria - Sablé Pasteleria</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body class="galeriaBody">
-    
     <header class="headerSitio">
-        <h1><a href="../index.html">
-            <img src="../img/sablee-logo1.png" alt="logo-pasteleria" width="175" height="175">
-        </a></h1>
-        <nav>
-            <ul class="navegacion">
-                <li class="navItem"><a href="../index.html">Inicio</a></li>
-                <li class="navItem"><a href="../pages/eventos.html">Eventos</a></li>
-                <li class="navItem"><a href="../pages/sobrevero.html">Sobre Vero</a></li>
-                <li class="navItem"><a href="../pages/galeria.html">Galeria</a></li>
-                <li class="navItem"><a href="../pages/contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo-sableé.jpeg" alt="" height="100%"
+                        width="100px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/sobrevero.html">Sobre Vero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
-        
+
         <hr>
-        <section class= "seccionTortas">
+        <section class="seccionTortas">
             <h2>Tortas</h2>
             <img src="../img/foto-cumple2.jpeg" alt="torta-dripcake" height="300" width="300">
         </section>
 
         <div class="botonWhatsApp">
-            <a href="https://api.whatsapp.com/send?phone=+543404536328" target="blank"><img src="../img/icono-whatsapp.png" alt="boton-whatsapp"></a>
+            <a href="https://api.whatsapp.com/send?phone=+543404536328" target="blank"><img
+                    src="../img/icono-whatsapp.png" alt="boton-whatsapp"></a>
         </div>
-        
+
         <hr>
 
         <section class="seccionMasasFinas">
             <h2>Masas Finas</h2>
             <img src="../img/foto.masasdulces1.jpeg" alt="masas-finas" height="300" width="300">
         </section>
-        
+
         <hr>
 
         <section class="seccionPostres">
@@ -66,7 +89,7 @@
         <section class="seccionInfoRapida">
             <p>
                 Contacto
-    
+
                 Calle Siempreviva 742
                 San Carlos Centro, Santa Fe
                 3404353682
@@ -77,16 +100,20 @@
                 width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            
+
         </section>
 
-     </main>
-    
-     <hr>
+    </main>
 
-     <footer class="footerSitio">
+    <hr>
+
+    <footer class="footerSitio">
         <p>Sablé Pasteleria. 2022. Todos los derechos reservados.</p>
     </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
