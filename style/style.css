@@ -712,9 +712,7 @@ textarea:valid~label {
 }
 
 @media screen and (max-width: 320px) {
-    .headerSitio {
-        display: none  ;
-    }
+
 
     .seccionUno {
         display: flex;
