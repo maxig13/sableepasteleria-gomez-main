@@ -6,8 +6,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-/*Probar comentar los height en el caso de que se rompan al probar el responsive
-Revisar el ultimo cuarto de la clase de Grids V2 para ir corrigiendo el responsive.*/
 
 
 .headerSitio {
@@ -15,12 +13,16 @@ Revisar el ultimo cuarto de la clase de Grids V2 para ir corrigiendo el responsi
     top: 0;
     height: 175px;
     width: 100%;
-    background-image: linear-gradient(to right, #f6f2ee, #ebb273);
+    background-color: #ebb273;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     grid-area: header;
+}
+
+nav {
+    background-color: #ebb273;
 }
 
 .logo{
@@ -36,6 +38,8 @@ li, a {
     
     
 }
+
+
 
 .navegacion {
     list-style-type: none;
@@ -78,7 +82,7 @@ li, a {
     flex-flow: row-reverse wrap;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/foto-torta1.jpeg);
+    background-image: url(../img/stock-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: seccionUno;
@@ -88,10 +92,11 @@ li, a {
 .imagenUno {
     padding: 2rem 2rem 2rem 2rem;
     width: 450px;
-    height:  auto;
-    
+    height:  auto;    
+}
 
-    
+.parrafoUno {
+    background-color: red;
 }
 
 .seccionDos {
