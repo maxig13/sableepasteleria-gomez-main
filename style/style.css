@@ -74,27 +74,22 @@ li, a {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 500;
-    height: 23%;
+    height: 50vh;
     background-color: #f6f2ee;
     display: flex;
     flex-flow: row-reverse wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-image: url(../img/stock-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    grid-area: seccionUno;
-    
-    
-}
-.imagenUno {
-    padding: 2rem 2rem 2rem 2rem;
-    width: 450px;
-    height:  auto;    
+    grid-area: seccionUno; 
 }
 
+
 .parrafoUno{
-    background-color: red;
+    color: whitesmoke;
 }
 
 .seccionDos {
@@ -113,7 +108,7 @@ li, a {
 
 .parrafoDos {
     order: 1;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px; 
 }
 
 .imagenDos {
@@ -135,18 +130,30 @@ li, a {
     color: #922547;
 }
 
+@media screen and (max-width: 600px) {
+    .imagenDos {
+        display: none;
+    }
+    
+}
+
 .seccionTres{
     font-family: 'Roboto', sans-serif;
     background-color: #f6f2ee;
     font-size: 20px;
     font-weight: 500;
-    height: 200px ;
+    height: auto ;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
     grid-area: seccionTres;
+}
+
+.tituloSobreVero {
+    margin: 0;  
 }
 
 .seccionTres a {
@@ -156,19 +163,19 @@ li, a {
     font-weight: 500;
 }
 
-.seccionTres a:hover {
+.parrafoVero {
+    margin: 0;
+}
+
+
+.botonVero:hover {
     color: #922547;
 }
 
-.tituloSobreVero {
-    order: 0;
-    text-align: end;
-}
-
 .galeriaSimple {
+    
     background-color: #f6f2ee;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
     "imagen1 imagen2"
@@ -238,6 +245,12 @@ li, a {
     font-size: 20px;
     font-weight: 500;
     
+}
+
+@media screen and (max-width: 300px) {   
+    iframe {
+        width: 100%;
+    }
 }
 
 /*FOOTER*/
@@ -521,11 +534,7 @@ textarea:valid~label {
 /*SITIO VERSION ESCRITORIO*/
 
 @media screen and (max-width:1024px){
-    
-
-    
-
-    .galeriaBody {
+       .galeriaBody {
         display: grid;
         grid-template-areas: 
         "header"
@@ -569,9 +578,6 @@ textarea:valid~label {
 }
 
 /*SITIO VERSION TABLETS*/
-
-
-
     .eventosBody {
         display: grid;
         grid-template-areas: 
@@ -611,7 +617,7 @@ textarea:valid~label {
         "infoRapida"
         "footer";
     }
-}
+
 
 /*CAMBIOS GENERALES PARA EL RESPONSIVE*/
 
@@ -627,10 +633,6 @@ textarea:valid~label {
 /*SITIO VERSION CELULAR*/
 
 @media screen and (max-width:411px){
-        .seccionUno img {
-        display: none;
-    }
-
     .seccionDos img {
         display: none;
     }
