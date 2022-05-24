@@ -39,8 +39,6 @@ li, a {
     
 }
 
-
-
 .navegacion {
     list-style-type: none;
     padding-right: 2rem;
@@ -95,7 +93,7 @@ li, a {
     height:  auto;    
 }
 
-.parrafoUno {
+.parrafoUno{
     background-color: red;
 }
 
@@ -115,7 +113,7 @@ li, a {
 
 .parrafoDos {
     order: 1;
-    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
 }
 
 .imagenDos {
@@ -230,6 +228,9 @@ li, a {
     align-items: flex-start;
     flex-flow:  column wrap;
     grid-area: infoRapida;
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .parrafoInfo {
@@ -248,6 +249,7 @@ li, a {
     flex-flow: row wrap;
     justify-content: flex-start;
     grid-area: footer;
+    position: bottom absolute;
 }
 
 .parrafoFooter {
@@ -521,17 +523,7 @@ textarea:valid~label {
 @media screen and (max-width:1024px){
     
 
-    .mainBody {
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "seccionUno seccionDos"
-        "seccionTres seccionTres"
-        "infoRapida infoRapida"
-        "imagenCarrete imagenCarrete"
-        "imagenCarreteB imagenCarreteB"
-        "footer footer";
-    }
+    
 
     .galeriaBody {
         display: grid;
@@ -578,16 +570,7 @@ textarea:valid~label {
 
 /*SITIO VERSION TABLETS*/
 
-@media screen and (max-width: 768px) {
-    .mainBody {
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "seccionUno seccionDos"
-        "seccionTres seccionTres"
-        "infoRapida infoRapida"
-        "footer footer";
-    }
+
 
     .eventosBody {
         display: grid;
@@ -644,19 +627,7 @@ textarea:valid~label {
 /*SITIO VERSION CELULAR*/
 
 @media screen and (max-width:411px){
-    .mainBody {
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "seccionUno seccionDos"
-        "seccionTres seccionTres"
-        "infoRapida infoRapida"
-        "footer footer";
-    }
-    
-
-
-    .seccionUno img {
+        .seccionUno img {
         display: none;
     }
 
