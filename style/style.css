@@ -308,7 +308,6 @@ li, a {
     justify-content: flex-start;
     align-items: flex-start;
     grid-area: tortas;
-
 }
 
 .seccionMasasFinas  {
@@ -376,16 +375,18 @@ li, a {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 250;
-    height: 400px ;
+    height: auto;
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 4rem;
     background-color: #f6f2ee;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
-    grid-area: casamientos;
+    text-align: center;
+}
+
+.seccionCasamientos img{
+    width: auto;
 }
 
 .seccionCasamientos img {
@@ -398,21 +399,18 @@ li, a {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 250;
-    height: 400px ;
+    height: auto;
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 4rem;
     background-color: #f6f2ee;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
-    grid-area: bautismos;
+    text-align: center;
 }
 
 .seccionBautismos img {
-    height: 300px auto;
-    width: 300px auto;
+    width: auto;
     
 }
 
@@ -420,21 +418,18 @@ li, a {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 250;
-    height: 400px ;
+    height: auto;
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 4rem;
     background-color: #f6f2ee;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
-    grid-area: cumpleanos;
+    text-align: center;
 }
 
 .seccionCumpleanos img {
-    height: 300px auto;
-    width: 300px auto;
+    width: auto;
     
 }
 
@@ -451,7 +446,6 @@ li, a {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    grid-area: contacto;
 
 }
 
@@ -546,49 +540,18 @@ textarea:valid~label {
         "infoRapida"
         "footer";
     }
-
-    .eventosBody {
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "casamientos casamientos"
-        "bautismos bautismos"
-        "cumpleanos cumpleanos"
-        "infoRapida infoRapida"
-        "footer footer";
-    }
-
+    
     .infoBody {
         display: grid;
         grid-template-areas: 
         "header"
         "sobreVero"
-        "infoRapida"
-        "footer";
-    }
-
-    .contactoBody {
-        display: grid;
-        grid-template-areas: 
-        "header"
-        "contacto"
         "infoRapida"
         "footer";
     }
 }
 
 /*SITIO VERSION TABLETS*/
-    .eventosBody {
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "casamientos casamientos"
-        "bautismos bautismos"
-        "cumpleanos cumpleanos"
-        "infoRapida infoRapida"
-        "footer footer";
-    }
-
     .infoBody {
         display: grid;
         grid-template-areas: 
@@ -597,28 +560,6 @@ textarea:valid~label {
         "infoRapida"
         "footer";
     }
-
-    .eventosBody {
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "casamientos casamientos"
-        "bautismos bautismos"
-        "cumpleanos cumpleanos"
-        "infoRapida infoRapida"
-        "footer footer";
-    }
-
-    .contactoBody {
-        display: grid;
-        grid-template-areas: 
-        "header"
-        "contacto"
-        "infoRapida"
-        "footer";
-    }
-
-
 /*CAMBIOS GENERALES PARA EL RESPONSIVE*/
 
 @media screen and (max-width: 705px) {
@@ -637,16 +578,6 @@ textarea:valid~label {
         display: none;
     }
 
-    .eventosBody {
-        display: grid;
-        grid-template-areas: 
-        "header header"
-        "casamientos casamientos"
-        "bautismos bautismos"
-        "cumpleanos cumpleanos"
-        "infoRapida infoRapida"
-        "footer footer";
-    }
 
     .infoBody {
         display: grid;
@@ -666,15 +597,6 @@ textarea:valid~label {
         "postres"
         "alfajores"
         "tartas"
-        "infoRapida"
-        "footer";
-    }
-
-    .contactoBody {
-        display: grid;
-        grid-template-areas: 
-        "header"
-        "contacto"
         "infoRapida"
         "footer";
     }
