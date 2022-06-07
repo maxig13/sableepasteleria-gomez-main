@@ -23,7 +23,8 @@ nav {
 .logo {
   cursor: pointer; }
 
-li, a {
+li,
+a {
   font-family: 'Roboto', sans-serif;
   font-weight: 250;
   font-size: 24px;
@@ -44,9 +45,11 @@ li, a {
 .nav-item a:hover {
   color: #922547; }
 
+/*BOTON WHATSAPP*/
 .botonWhatsApp img {
   position: fixed;
-  right: 0.5%; }
+  right: 0.5%;
+  z-index: 900; }
 
 /*PAGINA INDEX*/
 .seccionUno {
@@ -66,7 +69,8 @@ li, a {
   grid-area: seccionUno; }
 
 .parrafoUno {
-  color: whitesmoke; }
+  color: whitesmoke;
+  padding: 2rem 6rem 2rem 6rem; }
 
 .seccionDos {
   font-family: 'Roboto', sans-serif;
@@ -88,6 +92,8 @@ li, a {
 .imagenDos {
   width: 450px;
   height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   padding-left: 2rem;
   order: 0; }
 
@@ -170,6 +176,7 @@ li, a {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "imagen1" "imagen2" "imagen3" "imagen4"; } }
 
+/*INFO RAPIDA*/
 .seccionInfoRapida {
   height: 500px auto;
   width: 100%;
@@ -296,37 +303,30 @@ li, a {
   max-height: 850px;
   height: auto; }
 
-.seccionCasamientos {
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 250;
-  height: auto;
-  width: 100%;
-  background-color: #f6f2ee;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center; }
-  .seccionCasamientos img {
-    width: auto;
-    height: 300px auto;
-    width: 300px auto; }
+#carruselCasamiento .textoCasamientos {
+  background-color: #922547;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif; }
 
-.seccionBautismos, .seccionCumpleanos {
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 250;
-  height: auto;
+#carruselCatering img {
   width: 100%;
-  background-color: #f6f2ee;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center; }
-  .seccionBautismos img, .seccionCumpleanos img {
-    width: auto; }
+  max-height: 850px;
+  height: auto; }
+
+#carruselCatering .textoCatering {
+  background-color: #922547;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif; }
+
+#carruselCumpleanos img {
+  width: 100%;
+  max-height: 850px;
+  height: auto; }
+
+#carruselCumpleanos .textoCumpleanos {
+  background-color: #922547;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif; }
 
 /*PAGINA CONTACTO*/
 .seccionContacto {
@@ -350,7 +350,8 @@ form {
   margin-bottom: 30px;
   position: relative; }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   outline: 0;
@@ -378,11 +379,13 @@ button {
   width: 100%;
   cursor: pointer; }
 
-input:focus ~ label, input:valid ~ label {
+input:focus ~ label,
+input:valid ~ label {
   top: -35px;
   font-size: 14px; }
 
-textarea:focus ~ label, textarea:valid ~ label {
+textarea:focus ~ label,
+textarea:valid ~ label {
   top: -35px;
   font-size: 14px; }
 
