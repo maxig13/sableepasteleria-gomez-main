@@ -340,71 +340,15 @@ nav {
 
 /*PAGINA CONTACTO*/
 .seccionContacto {
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 250;
-  height: 550px;
-  width: 100%;
   background-color: #f6f2ee;
   display: flex;
-  flex-flow: column;
+  flex-flow: column wrap;
   justify-content: center;
-  align-items: center; }
-
-form {
-  width: 90%;
-  width: 600px; }
+  text-align: center; }
 
 .formularioContacto {
-  margin-top: 25px;
-  margin-bottom: 30px;
-  position: relative; }
-
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  outline: 0;
-  border: 1px solid black;
-  color: black;
-  background: transparent;
-  font-size: 15px; }
-
-label {
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 10px;
-  color: black;
-  cursor: text;
-  transition: 0.2s; }
-
-button {
-  padding: 0px;
-  color: black;
-  outline: none;
-  background: transparent;
-  border: 1px solid black;
-  width: 100%;
-  cursor: pointer; }
-
-input:focus ~ label,
-input:valid ~ label {
-  top: -35px;
-  font-size: 14px; }
-
-textarea:focus ~ label,
-textarea:valid ~ label {
-  top: -35px;
-  font-size: 14px; }
-
-.nombreNumero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  .nombreNumero .formularioContacto {
-    flex-basis: 48%; }
+  padding-top: 2rem;
+  background-color: #f6f2ee; }
 
 .mapa {
   font-family: 'Roboto', sans-serif;
@@ -412,10 +356,10 @@ textarea:valid ~ label {
   font-weight: 250;
   height: 400px;
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 4rem;
   background-color: #f6f2ee;
   display: flex;
   flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start; }
+  justify-content: center;
+  align-items: center; }
+  .mapa iframe {
+    width: 100%; }

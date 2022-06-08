@@ -54,28 +54,24 @@
             <p>
                 Sentite libre de contactarnos, ya sea para una consulta o un pedido que quieras realizar!
             </p>
-            <form>
-                <div class="nombreNumero">
-                    <div class="formularioContacto">
-                        <input type="text" id="nombre" required>
-                        <label for="name"> <i class="fa-solid fa-user"></i> Tu nombre</label>
-                    </div>
-                    <div class="formularioContacto">
-                        <input type="text" id="numero" required>
-                        <label for="numero"><i class="fa-solid fa-phone"></i>Número de teléfono</label>
-                    </div>
+            <form class="formularioContacto">
+                <div class="mb-3 col-8">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
                 </div>
-
-                <div class="formularioContacto">
-                    <input type="email" id="email" required>
-                    <label for="name"><i class="fa-solid fa-envelope"></i>E-mail</label>
+                <div class="mb-3 col-8">
+                  <label for="nombre" class="form-label">Nombre y apellido</label>
+                  <input type="nombre" class="form-control" id="nombreInput">
                 </div>
-                <div class="formularioContacto">
-                    <textarea id="mensaje" rows="8" required></textarea>
-                    <label for="mensaje"><i class="fa-solid fa-message"></i>Consulta o Pedido</label>
+                <div class="mb-3 col-8">
+                    <label for="numero" class="form-label">Numero de contacto</label>
+                    <input type="numero" class="form-control" id="numeroInput">
                 </div>
-                <button type="submit"><i class="fa-solid fa-cake-slice"></i>Enviar</button>
-        </section>
+                <div class="input-group mb-3 col-8">
+                    <textarea class="form-control" aria-label="With textarea" placeholder="Detallános tu consulta o pedido"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
         <section class="mapa">
             <h2 class="Ubicacion">Ubicación</h2>
             <iframe
