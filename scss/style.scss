@@ -18,44 +18,47 @@
     align-items: center;
     grid-area: header;
     z-index: 999;
-}
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
 
-nav {
-    background-color: #ebb273;
-
-    li,a {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 250;
-        font-size: 24px;
-        text-decoration: none;
-        color: black;
-    }
-}
-
-.logo {
-    cursor: pointer;
-}
-
-
-.navegacion {
-    list-style-type: none;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    flex-flow: column wrap;
-
-    li {
-        display: inline-block;
-        padding: 1rem;
-
+    nav {
+        background-color: #ebb273;
+    
+        li,
         a {
-            transition: all 0.3s ease 0s;
+            text-decoration: none;
+            color: #232b2b;
         }
     }
+    
+    .logo {
+        cursor: pointer;
+    }
+    
+    
+    .navegacion {
+        list-style-type: none;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        flex-flow: column wrap;
+    
+        li {
+            display: inline-block;
+            padding: 1rem;
+    
+            a {
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+    
+    .nav-item a:hover {
+        color: #922547;
+    }
 }
 
-.nav-item a:hover {
-    color: #922547;
-}
+
 
 /*BOTON WHATSAPP*/
 .botonWhatsApp img {
@@ -85,7 +88,8 @@ nav {
 
 .parrafoUno {
     color: whitesmoke;
-    padding: 2rem 6rem 2rem 6rem;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .seccionDos {
@@ -100,42 +104,42 @@ nav {
     align-items: center;
     text-align: center;
     grid-area: seccionDos;
-}
 
-.parrafoDos {
-    order: 1;
-    padding: 5px 5px 5px 5px;
+    .parrafoDos {
+        order: 1;
+        padding: 5px 5px 5px 5px;
 
-    a {
-        text-decoration: none;
-        color: black;
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
-}
 
-.imagenDos {
-    width: 450px;
-    height: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    order: 0;
-}
-
-.botonOrden {
-    transition: all 0.3s ease 0s;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    order: 2;
-}
-
-.seccionDos a:hover {
-    color: #922547;
-}
-
-@media screen and (max-width: 600px) {
     .imagenDos {
-        display: none;
+        width: 450px;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        order: 0;
+    }
+
+    .botonOrden {
+        transition: all 0.3s ease 0s;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        order: 2;
+    }
+
+    .seccionDos a:hover {
+        color: #922547;
+    }
+
+    @media screen and (max-width: 600px) {
+        .imagenDos {
+            display: none;
+        }
     }
 }
 
@@ -157,7 +161,7 @@ nav {
         text-decoration: none;
         color: black;
     }
-    
+
 }
 
 .tituloSobreVero {
@@ -240,6 +244,7 @@ nav {
     li {
         padding-left: 1rem;
         text-indent: 0%;
+        flex-flow: column wrap;
     }
 }
 
@@ -252,23 +257,53 @@ nav {
 /*FOOTER*/
 
 .footerSitio {
-    height: 100px;
+    height: 100%;
     width: 100%;
     background-color: #922547;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    grid-area: footer;
-    position: bottom absolute;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+    ul {
+        padding-top: 1rem;
+        height: 100%;
+
+        h4 {
+            color: #181a18;
+            height: 100%;
+        }
+
+        li {
+            list-style: none;
+            color: #181a18;
+
+            a {
+                text-decoration: none;
+                color: #181a18;
+                transition: all 0.5s ease 0s;
+
+                i {
+                    padding-right: 5px;
+                }
+            }
+
+            a:hover {
+                font-size: 20px;
+            }
+        }
+    }
 }
 
-.parrafoFooter {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 250;
-    padding-top: 25px;
-    padding-left: 2rem;
+@media screen and (max-width: 580px) {
+    .footerSitio {
+        justify-content: flex-start;
+    }
 }
+
 
 /*PAGINA SOBRE VERO*/
 
@@ -424,10 +459,12 @@ nav {
     justify-content: center;
     text-align: center;
 }
+
 .formularioContacto {
     padding-top: 2rem;
-    background-color: #f6f2ee;  
+    background-color: #f6f2ee;
 }
+
 .mapa {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;

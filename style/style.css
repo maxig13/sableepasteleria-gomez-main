@@ -15,33 +15,30 @@
   justify-content: space-evenly;
   align-items: center;
   grid-area: header;
-  z-index: 999; }
-
-nav {
-  background-color: #ebb273; }
-  nav li, nav a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 250;
-    font-size: 24px;
-    text-decoration: none;
-    color: black; }
-
-.logo {
-  cursor: pointer; }
-
-.navegacion {
-  list-style-type: none;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  flex-flow: column wrap; }
-  .navegacion li {
-    display: inline-block;
-    padding: 1rem; }
-    .navegacion li a {
-      transition: all 0.3s ease 0s; }
-
-.nav-item a:hover {
-  color: #922547; }
+  z-index: 999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 24px; }
+  .headerSitio nav {
+    background-color: #ebb273; }
+    .headerSitio nav li,
+    .headerSitio nav a {
+      text-decoration: none;
+      color: #232b2b; }
+  .headerSitio .logo {
+    cursor: pointer; }
+  .headerSitio .navegacion {
+    list-style-type: none;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    flex-flow: column wrap; }
+    .headerSitio .navegacion li {
+      display: inline-block;
+      padding: 1rem; }
+      .headerSitio .navegacion li a {
+        transition: all 0.3s ease 0s; }
+  .headerSitio .nav-item a:hover {
+    color: #922547; }
 
 /*BOTON WHATSAPP*/
 .botonWhatsApp img {
@@ -68,7 +65,8 @@ nav {
 
 .parrafoUno {
   color: whitesmoke;
-  padding: 2rem 6rem 2rem 6rem; }
+  padding-left: 5%;
+  padding-right: 5%; }
 
 .seccionDos {
   font-family: 'Roboto', sans-serif;
@@ -82,35 +80,30 @@ nav {
   align-items: center;
   text-align: center;
   grid-area: seccionDos; }
-
-.parrafoDos {
-  order: 1;
-  padding: 5px 5px 5px 5px; }
-  .parrafoDos a {
-    text-decoration: none;
-    color: black; }
-
-.imagenDos {
-  width: 450px;
-  height: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  order: 0; }
-
-.botonOrden {
-  transition: all 0.3s ease 0s;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  order: 2; }
-
-.seccionDos a:hover {
-  color: #922547; }
-
-@media screen and (max-width: 600px) {
-  .imagenDos {
-    display: none; } }
+  .seccionDos .parrafoDos {
+    order: 1;
+    padding: 5px 5px 5px 5px; }
+    .seccionDos .parrafoDos a {
+      text-decoration: none;
+      color: black; }
+  .seccionDos .imagenDos {
+    width: 450px;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    order: 0; }
+  .seccionDos .botonOrden {
+    transition: all 0.3s ease 0s;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    order: 2; }
+  .seccionDos .seccionDos a:hover {
+    color: #922547; }
+  @media screen and (max-width: 600px) {
+    .seccionDos .imagenDos {
+      display: none; } }
 
 .seccionTres {
   font-family: 'Roboto', sans-serif;
@@ -195,7 +188,8 @@ nav {
   font-size: 20px; }
   .seccionInfoRapida li {
     padding-left: 1rem;
-    text-indent: 0%; }
+    text-indent: 0%;
+    flex-flow: column wrap; }
 
 @media screen and (max-width: 350px) {
   iframe {
@@ -203,21 +197,37 @@ nav {
 
 /*FOOTER*/
 .footerSitio {
-  height: 100px;
+  height: 100%;
   width: 100%;
   background-color: #922547;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-  grid-area: footer;
-  position: bottom absolute; }
-
-.parrafoFooter {
+  justify-content: space-evenly;
+  align-items: flex-start;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 250;
-  padding-top: 25px;
-  padding-left: 2rem; }
+  font-size: 15px;
+  font-weight: bold; }
+  .footerSitio ul {
+    padding-top: 1rem;
+    height: 100%; }
+    .footerSitio ul h4 {
+      color: #181a18;
+      height: 100%; }
+    .footerSitio ul li {
+      list-style: none;
+      color: #181a18; }
+      .footerSitio ul li a {
+        text-decoration: none;
+        color: #181a18;
+        transition: all 0.5s ease 0s; }
+        .footerSitio ul li a i {
+          padding-right: 5px; }
+      .footerSitio ul li a:hover {
+        font-size: 20px; }
+
+@media screen and (max-width: 580px) {
+  .footerSitio {
+    justify-content: flex-start; } }
 
 /*PAGINA SOBRE VERO*/
 .sobreVero {
