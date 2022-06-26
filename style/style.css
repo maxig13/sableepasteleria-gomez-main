@@ -12,7 +12,7 @@
   background-color: #ebb273;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   grid-area: header;
   z-index: 999;
@@ -21,9 +21,9 @@
   font-size: 24px; }
   .headerSitio nav {
     background-color: #ebb273; }
-    .headerSitio nav li,
-    .headerSitio nav a {
+    .headerSitio nav li, .headerSitio nav a {
       text-decoration: none;
+      text-transform: uppercase;
       color: #232b2b; }
   .headerSitio .logo {
     cursor: pointer; }
@@ -62,11 +62,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: seccionUno; }
-
-.parrafoUno {
-  color: whitesmoke;
-  padding-left: 5%;
-  padding-right: 5%; }
+  .seccionUno .parrafoUno {
+    color: whitesmoke;
+    padding-left: 5%;
+    padding-right: 5%; }
 
 .seccionDos {
   font-family: 'Roboto', sans-serif;
@@ -354,22 +353,89 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  text-align: center; }
-
-.formularioContacto {
-  padding-top: 2rem;
-  background-color: #f6f2ee; }
-
-.mapa {
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 250;
-  height: 400px;
-  width: 100%;
-  background-color: #f6f2ee;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center; }
-  .mapa iframe {
-    width: 100%; }
+  text-align: center;
+  font-family: 'Roboto', sans-serif; }
+  .seccionContacto .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px; }
+    .seccionContacto .container .contact-box {
+      max-width: 850px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #ebb273;
+      box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19); }
+    .seccionContacto .container .left {
+      height: 100%;
+      background: url(../img/catering3.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .seccionContacto .container .right {
+      padding: 25px 40px; }
+    .seccionContacto .container h1 {
+      position: relative;
+      margin-bottom: 10px;
+      padding-bottom: 10px; }
+    .seccionContacto .container .field {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 1.1rem;
+      margin-bottom: 22px;
+      transition: .3s;
+      outline: none;
+      border: 2px solid rgba(230, 230, 230, 0.6); }
+    .seccionContacto .container .field:hover {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .seccionContacto .container .field:focus {
+      background-color: #fff;
+      border: 2px solid rgba(30, 85, 250, 0.47); }
+    .seccionContacto .container .area {
+      min-height: 150px; }
+    .seccionContacto .container .btn {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-size: 1.1rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      border: none; }
+    @media screen and (max-width: 880px) {
+      .seccionContacto .container .container {
+        padding: 0; }
+      .seccionContacto .container .contact-box {
+        grid-template-columns: 1fr; }
+      .seccionContacto .container .left {
+        height: 200px; } }
+  @media screen and (max-width: 880px) {
+    .seccionContacto .container {
+      padding: 10px 50px;
+      max-width: fit-content; } }
+  @media screen and (max-width: 480px) {
+    .seccionContacto .container {
+      padding: 5px 25px;
+      max-width: fit-content; } }
+  .seccionContacto .mapa {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 250;
+    height: 400px;
+    width: 100%;
+    background-color: #f6f2ee;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 1rem; }
+    .seccionContacto .mapa iframe {
+      width: 600px; }
+    @media screen and (max-width: 600px) {
+      .seccionContacto .mapa iframe {
+        width: 100%; } }

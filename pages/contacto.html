@@ -18,7 +18,7 @@
 
 <body class="contactoBody">
     <header class="headerSitio">
-        <nav class="navbar navbar-expand-sm d-flex w-100">
+        <nav class="navbar navbar-expand-md d-flex w-100">
             <div class="container-fluid">
                 <a class="navbar-brand d-inline-block align-center justify-center" href="../index.html"><img
                         src="../img/sablee-logo1.png" alt="" height="100%" width="100px"></a>
@@ -50,28 +50,19 @@
     </header>
     <main>
         <section class="seccionContacto">
-            <h2>Contactanos!</h2>
-            <p>
-                Sentite libre de contactarnos, ya sea para una consulta o un pedido que quieras realizar!
-            </p>
-            <form class="formularioContacto">
-                <div class="mb-3 col-8">
-                  <label for="email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+            <h1>Contactanos!</h1>
+            <div class="container">
+                <div class="contact-box">
+                    <div class="left"></div>
+                    <div class="right">
+                        <input type="text" class="field" placeholder="Nombre y apellido">
+                        <input type="text" class="field" placeholder="Email">
+                        <input type="text" class="field" placeholder="Número">
+                        <textarea class="field area" placeholder="Detalla tu pedido"></textarea>
+                        <button class="btn">Enviar</button>
+                    </div>
                 </div>
-                <div class="mb-3 col-8">
-                  <label for="nombre" class="form-label">Nombre y apellido</label>
-                  <input type="nombre" class="form-control" id="nombreInput">
-                </div>
-                <div class="mb-3 col-8">
-                    <label for="numero" class="form-label">Numero de contacto</label>
-                    <input type="numero" class="form-control" id="numeroInput">
-                </div>
-                <div class="input-group mb-3 col-8">
-                    <textarea class="form-control" aria-label="With textarea" placeholder="Detallános tu consulta o pedido"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-              </form>
+            </div>
         <section class="mapa">
             <h2 class="Ubicacion">Ubicación</h2>
             <iframe
