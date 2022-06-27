@@ -205,6 +205,24 @@
     .sobreVero p {
       font-size: 1.5rem; } }
 
+.sobreVero2 {
+  background-image: url(../img/span-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source serif pro', serif;
+  font-size: 2rem;
+  text-align: center; }
+  .sobreVero2 h2 {
+    color: #922547;
+    font-weight: bold;
+    font-size: 2.2rem; }
+
 /*PAGINA GALERIA*/
 .seccionTortas {
   font-family: 'Source serif pro', serif;
