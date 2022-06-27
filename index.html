@@ -64,29 +64,37 @@
         <section class="seccionDos">
             <p class="parrafoDos">Creemos que las tortas son el sello de toda celebración y nos sentimos privilegiados
                 de ser parte de los momentos especiales de tu vida.
-                <a class="botonOrden" href="./pages/contacto.html">Ordena ahora</a></p>
+                <a class="botonOrden" href="./pages/contacto.html">Ordena ahora!</a></p>
 
             <img class="imagenDos" src="./img/foto-torta2.jpeg" alt="torta-flores">
         </section>
 
-        <section class="seccionTres">
-            <h2 class="tituloSobreVero">Sobre Vero</h2>
-            <p class="parrafoVero">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, aperiam? Quod,
-                labore officia?
-                Repudiandae nulla totam nam et sint dolore quia voluptates corrupti illum, facere nihil quis! Quas,
-                accusamus explicabo?
-            </p>
-            <a class="botonVero" href="./pages/sobrevero.html">Conoce mas a nuestra pastelera</a>
-
-        </section>
-
-        <section class="galeriaSimple">
-            <img class="img1" src="./img/foto-tarta1.jpeg" alt="foto-tarta-nueces">
-            <img class="img2" src="./img/foto-tortas1.jpeg" alt="foto-tortas-varias">
-            <img class="img3" src="./img/torta-confirmacion.jpeg" alt="">
-            <img class="img4" src="./img/lettercake.jpeg" alt="">
-
-        </section>
+        <div id="miCarrusel" class="carousel slide carousel-fade" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="2" class="active" aria-current="true" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/drip-cake.webp" class="d-block w-100" alt="drip-cake">
+              </div>
+              <div class="carousel-item active">
+                <img src="./img/torta-chocolate2.jpg" class="d-block w-100" alt="naked-cake">
+              </div>
+              <div class="carousel-item active">
+                <img src="./img/torta-chocolate.jpg" class=" d-block w-100" alt="naked-cake">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </main>
 
 
