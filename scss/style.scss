@@ -21,39 +21,41 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 24px;
-    
+
     nav {
         background-color: #ebb273;
-        li,a {
+
+        li,
+        a {
             text-decoration: none;
             text-transform: uppercase;
             color: #232b2b;
-            
-            
+
+
         }
     }
-    
+
     .logo {
         cursor: pointer;
     }
-    
-    
+
+
     .navegacion {
         list-style-type: none;
         padding-right: 2rem;
         padding-left: 2rem;
         flex-flow: column wrap;
-    
+
         li {
             display: inline-block;
             padding: 1rem;
-    
+
             a {
                 transition: all 0.3s ease 0s;
             }
         }
     }
-    
+
     .nav-item a:hover {
         color: #922547;
     }
@@ -165,25 +167,25 @@
         color: black;
     }
 
-}
+    .tituloSobreVero {
+        margin: 0;
+    }
 
-.tituloSobreVero {
-    margin: 0;
-}
+    .seccionTres a {
+        transition: all 0.3s ease 0s;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+    }
 
-.seccionTres a {
-    transition: all 0.3s ease 0s;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-}
+    .parrafoVero {
+        margin: 0;
+    }
 
-.parrafoVero {
-    margin: 0;
-}
+    .botonVero:hover {
+        color: #922547;
+    }
 
-.botonVero:hover {
-    color: #922547;
 }
 
 .galeriaSimple {
@@ -192,6 +194,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "imagen1 imagen2""imagen3 imagen4";
     gap: 10px;
+    padding-bottom: 1rem;
 }
 
 .img1 {
@@ -268,8 +271,8 @@
     justify-content: space-evenly;
     align-items: flex-start;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 500;
 
     ul {
         padding-top: 1rem;
@@ -278,6 +281,7 @@
         h4 {
             color: #181a18;
             height: 100%;
+            font-weight: bold;
         }
 
         li {
@@ -295,7 +299,7 @@
             }
 
             a:hover {
-                font-size: 20px;
+                font-size: 22px;
             }
         }
     }
@@ -512,13 +516,13 @@
             border: 2px solid rgba(230, 230, 230, 0.6);
         }
 
-        .field:hover{
+        .field:hover {
             background-color: rgba(0, 0, 0, 0.1);
         }
 
-        .field:focus{
+        .field:focus {
             background-color: #fff;
-            border: 2px solid rgba(30,85, 250, 0.47);
+            border: 2px solid rgba(30, 85, 250, 0.47);
         }
 
         .area {
@@ -575,18 +579,16 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding-bottom: 1rem;
-    
+
         iframe {
             width: 600px;
         }
-    
+
         @media screen and (max-width: 600px) {
             iframe {
                 width: 100%;
             }
         }
     }
-    
+
 }
-
-
