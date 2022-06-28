@@ -159,7 +159,8 @@
     .footerSitio ul li {
       list-style: none;
       color: #181a18;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      padding-bottom: 10px; }
       .footerSitio ul li a {
         text-decoration: none;
         color: #181a18;
@@ -209,7 +210,7 @@
   background-image: url(../img/span-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-flow: column wrap;
@@ -223,70 +224,60 @@
     font-weight: bold;
     font-size: 2.2rem; }
 
+@media screen and (max-width: 1018px) {
+  .sobreVero2 {
+    flex-flow: row wrap; } }
+
 /*PAGINA GALERIA*/
-.seccionTortas {
-  font-family: 'Source serif pro', serif;
-  font-weight: 250;
-  height: 350px;
-  width: 100%;
-  background-color: #f6f2ee;
+.tituloGaleria {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  grid-area: tortas; }
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Source serif pro', serif;
+  padding-top: 1rem;
+  background-color: #f6f2ee;
+  margin-bottom: 0%;
+  height: 25vh;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #232b2b; }
 
-.seccionMasasFinas {
-  font-family: 'Source serif pro', serif;
-  font-size: 20px;
-  font-weight: 250;
-  height: 350px;
+.grid-container {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+  gap: 10px;
+  padding-top: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
   background-color: #f6f2ee;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  grid-area: masasFinas; }
+  grid-auto-flow: dense; }
+  .grid-container .grid-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 19px 5px black; }
+    .grid-container .grid-item img {
+      height: 100%;
+      width: 100%; }
+  .grid-container .grid-item:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04); }
 
-.seccionPostres {
-  font-family: 'Source serif pro', serif;
-  font-size: 20px;
-  font-weight: 250;
-  height: 350px;
-  width: 100%;
-  background-color: #f6f2ee;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  grid-area: postres; }
+@media screen and (min-width: 768px) {
+  .ancho {
+    grid-column: span 2; }
+  .alto {
+    grid-row: span 2; } }
 
-.seccionAlfajores {
-  font-family: 'Source serif pro', serif;
-  font-size: 20px;
-  font-weight: 250;
-  height: 350px;
-  width: 100%;
-  background-color: #f6f2ee;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  grid-area: alfajores; }
-
-.seccionTartas {
-  font-family: 'Source serif pro', serif;
-  font-size: 20px;
-  font-weight: 250;
-  height: 350px;
-  width: 100%;
-  background-color: #f6f2ee;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  grid-area: tartas; }
+@media screen and (max-width: 480px) {
+  .grid-container {
+    padding: 1%; } }
 
 /*PAGINA EVENTOS*/
 #carruselCasamiento img {
@@ -351,6 +342,9 @@
   justify-content: center;
   text-align: center;
   font-family: 'Source serif pro', serif; }
+  .seccionContacto h1 {
+    padding-top: 1rem;
+    text-transform: uppercase; }
   .seccionContacto .container {
     position: relative;
     display: flex;
