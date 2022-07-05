@@ -1,13 +1,12 @@
-/* Login de usuario
-
+//Login de usuario
 let usuario = '';
 
 while (usuario != 'Maxi') {
-    usuario = prompt('Ingresar su usuario')
-    if (usuario == 'Maxi') {
-        alert('Bienvendio Maxi')
+    usuario = prompt('Ingrese su usuario')
+    if (usuario == '') {
+        alert(`Bienvenido ${usuario}`)
     }else{
-        alert(usuario + ', tu no tienes cuenta!');
+        alert(`${usuario}, no tienes cuenta! Debes crearte una.`);
     }
 } 
 
@@ -18,33 +17,38 @@ while (contrasena != '1234'){
     if (contrasena == '1234') {
         alert('Identificacion verificada')
     }else{
-        alert('Contraseña incorrecta, tu no eres Maxi');
+        alert('Contraseña incorrecta');
     }   
-} */
+}
 
-// Carrito de compras
+
+/* // Carrito de compras
 
 //Variables globales
-let item = ['Torta brownie', 'Alfajor de maicena', 'Budin de limon'];
+const items = [
+    {items: 'Torta brownie', precio: 1000},
+    {items: 'Alfajor de maicena', precio: 150},
+    {items: 'Budin de limon', precio: 600}
+];
 let accion;
-let precio;
+
+
+//Funciones 
+const seleccionItem = (items) => {
+    console.log(`Usted a seleccionado ${items4}`) 
+}
+
+seleccionItem();4
+const checkout = (precio) => {
+    
+}
 
 //Menu
 do {
     accion = Number(prompt('Seleccione una accion: \n\n1 - Seleccion de productos\n2 - Proceder al pago\n3 - Vaciar carrito\n4 - Salir'));
     switch (accion) {
         case 1:
-            do {
-                item = Number(prompt(`Seleccione un producto: \n\n1 - Torta brownie\n2 - Alfajor de maicena\n3 - Budin de limon\n4 - Salir`));
-                switch (item) {
-                    case 1:
-                        
-                        break;
-                
-                    default:
-                        break;
-                }
-            }while(item !==4);
+             
             break;
         case 2:
             
@@ -53,6 +57,7 @@ do {
             
             break;
         case 4:
+            alert('Vuelva pronto!');
             break;
     
         default:
@@ -61,3 +66,5 @@ do {
     }
 
 }while(accion !== 4);
+
+console.log(items); */
