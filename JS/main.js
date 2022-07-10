@@ -68,3 +68,5 @@ do {
 }while(accion !== 4);
 
 console.log(items); */
+
+//PROBAR METODO REDUCE (DIAPO 25 DE CLASE 7)
