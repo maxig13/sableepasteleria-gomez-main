@@ -2,8 +2,21 @@
 
 function comprar(nombre, email, tel, productosEnCarro) {
     let cant = productosEnCarro.reduce((acc, item) => item.precio + acc, 0);  
-    alert("Gracias" + nombre + " por tu compra. \n Total: $" + cant);   
+    alert("Gracias " + nombre + " por tu compra. \n Total: $" + cant);   
 }
+
+class Producto {
+    constructor(id, nombre, precio, categoria) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.categoria = categoria;
+    }
+    mostrarProducto() {
+        return ('Producto: ' + this.nombre + ' Precio: ' + this.precio + ' ' + ' ID: ' + this.id + '\n');
+    }
+}
+    
 
 let productos = [
     new Producto(1001, 'Cupcake de frambuesa', 250, 'Cupcakes'),
@@ -33,6 +46,7 @@ let categorias = ["Cupcakes", "Alfajores", "Tartas", "Masas Finas"];
 let productosEnCarro = [];
 
 let categoria = "";
+
 
 
 while (categoria != "salir" && categoria != null) {
