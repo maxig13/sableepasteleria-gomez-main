@@ -1,9 +1,9 @@
 //Ecommerce del sitio
 
-function comprar(nombre, email, tel, productosEnCarro) {
-    let cant = productosEnCarro.reduce((acc, item) => item.precio + acc, 0);  
-    alert("Gracias " + nombre + " por tu compra. \n Total: $" + cant);   
-}
+let categorias = ["Cupcakes", "Alfajores", "Tartas", "Masas Finas"];
+const containerCupcakes = document.getElementById("seccionCupcakes");
+
+let carrito = [];
 
 class Producto {
     constructor(id, nombre, precio, categoria) {
@@ -12,17 +12,14 @@ class Producto {
         this.precio = precio;
         this.categoria = categoria;
     }
-    mostrarProducto() {
-        return ('Producto: ' + this.nombre + ' Precio: ' + this.precio + ' ' + ' ID: ' + this.id + '\n');
-    }
 }
-    
+
 
 let productos = [
     new Producto(1001, 'Cupcake de frambuesa', 250, 'Cupcakes'),
     new Producto(1002, 'Cupcake de vainilla y chips', 250, 'Cupcakes'),
     new Producto(1003, 'Cupcake de limón', 250, 'Cupcakes'),
-    new Producto(1004, 'Cupcake de chocolate', 300,'Cupcakes'),
+    new Producto(1004, 'Cupcake de chocolate', 300, 'Cupcakes'),
 
     new Producto(2001, 'Alfajor de masa sablé', 150, 'Alfajores'),
     new Producto(2002, 'Alfajor de chocolate', 200, 'Alfajores'),
@@ -36,57 +33,35 @@ let productos = [
 
     new Producto(4001, 'Cañones de dulce de leche', 100, 'Masas Finas'),
     new Producto(4002, 'Bombas de crema', 100, 'Masas Finas'),
-    new Producto(4003, 'Macarons', 150,'Masas Finas'),
+    new Producto(4003, 'Macarons', 150, 'Masas Finas'),
     new Producto(4004, 'Petit fours', 150, 'Masas Finas'),
 
 ];
 
-let categorias = ["Cupcakes", "Alfajores", "Tartas", "Masas Finas"];
+productos.forEach((producto) => {
+    const div = document.createElement('div');
+    div.classList.add('producto');
+    div.innerHTML = `
+    <h3>${producto.nombre}</h3>
+    <p class = "precioProducto">Precio:$ ${producto.precio}</p>
+    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class= fas fa-shopping cart"></button>
+    `
 
-let productosEnCarro = [];
+    containerCupcakes.appendChild(div);
 
-let categoria = "";
+})
 
+const boton = document.getElementById("agregar${producto.id}");
 
+boton.addEventListener('click', () => {
+agregarProductos(producto.id);
+})
 
-while (categoria != "salir" && categoria != null) {
-    let aux = categorias.join ("\n");
-    categoria = prompt(
-        'Ingrese un categoria para continuar con su compra o ingrese "salir": \n(' + aux + ")"
-    );
-   
-    if (categoria != "salir" && categoria != null) {
-       let productosFiltradoPorCategoria = productos.filter(
-        (item) => item.categoria == categoria
-        );
-
-        
-        let cartel = "";
-        for (let i = 0; i < productosFiltradoPorCategoria.length; i++) {
-            cartel += productosFiltradoPorCategoria[i].mostrarProducto();
-        }
-
-        let idSeleccionado = parseInt(
-            prompt("Seleccione el id del producto que quiere comprar: \n\n" + cartel)
-        );
-
-        let productoParaCarro = productosFiltradoPorCategoria.find(
-            (item) => item.id == idSeleccionado
-            );
-
-        if (productoParaCarro) {
-                productosEnCarro.push(productoParaCarro);                
-            }            
-    }    
-}
-
-if (productosEnCarro.length > 0) {
-    alert('Para terminar su compra, ingrese sus datos: ');
-    let nombre = prompt('ingrese su nombre');
-    let mail = prompt('ingrese su email');
-    let tel = prompt('ingrese su teléfono');
-    comprar(nombre, mail, tel, productosEnCarro);
-    }
+const agregarProductos = (prodId) => {
+    const item = productos.find((prod) => prod.id === prodId)
+    carrito.push(item);
+    console.log(carrito)
+};
 
 //PROBAR METODO REDUCE (DIAPO 25 DE CLASE 7)
 

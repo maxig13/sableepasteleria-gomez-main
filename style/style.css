@@ -429,3 +429,9 @@
     @media screen and (max-width: 600px) {
       .seccionContacto .mapa iframe {
         width: 100%; } }
+
+h3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 1rem; }
