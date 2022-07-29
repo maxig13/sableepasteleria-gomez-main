@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/8ab2bca4f8.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="mainBody">
+<body class="ecommerceBody">
    
     <header class="headerSitio">
         <nav class="navbar navbar-expand-md d-flex w-100">
@@ -53,43 +53,32 @@
     </header>
     <main>
         <h1>Tienda</h1>
-        <p>
-            Nuestras delicias disponibles para que ordenes inmediatamente, simplemente haz click en la que quieras!</p>
-
-        <h3>Cupcakes</h3>
-        <section id="seccionCupcakes" class="grid-container-ecommerce">
-            
-        </section>
+        <p class="parrafoEcommerce">
+            Nuestras delicias disponibles para que ordenes inmediatamente, simplemente haz click en la que quieras!
+        </p>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
         
-        <h3>Alfajores</h3>
-        <section id="seccionAlfajores" class="grid-container-ecommerce">
-           
-        </section>
+        <select id="filtroCategoria">
+            <option value="Todos">Todos</option>
+            <option value="Alfajores">Alfajores</option>
+            <option value="Tartas">Tartas</option>
+            <option value="Cupcakes">Cupcakes</option>
+            <option value="Masas Finas">Masas Finas</option>
+        </select>
 
-        <h3>Tartas</h3>
-        <section id="seccionTartas" class="grid-container-ecommerce">
+        <section id="seccionProductos" class="grid-container-ecommerce">
             
         </section>
 
-        <h3>Masas finas</h3>
-        <section id="seccionMasas" class="grid-container-ecommerce">
-           
-        </section>
-        <div class="col-md-6">
-            <table id="tablaProductos" class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <td>Nombre</td>
-                        <td>Precio</td>
-                    </tr>
-                    </th>
-                    
-                    <tbody class="tabla">
-                        
-                    </tbody>
-                    
-            </table>
-
+        <div class="modal-contenedor">
+            <div class="modal-carrito">
+                <h3>Carrito</h3>
+                <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                <div id="carrito-contenedor"></div>
+            </div>
+            <p class="precioProducto">Precio Total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
     </main>
 
     <footer class="footerSitio">
@@ -122,6 +111,7 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
      <script src="../JS/main.js"></script>
+     <script src="../JS/modal.js"></script>
 </body>
 
 </html>

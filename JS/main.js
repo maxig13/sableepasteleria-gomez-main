@@ -1,67 +1,106 @@
 //Ecommerce del sitio
 
-let categorias = ["Cupcakes", "Alfajores", "Tartas", "Masas Finas"];
-const containerCupcakes = document.getElementById("seccionCupcakes");
+const seccionProductos = document.getElementById("seccionProductos");
+
+const contenedorCarrito = document.getElementById("carrito-contenedor");
+
+const botonVaciar = document.getElementById('vaciar-carrito');
+
+const contadorCarrito = document.getElementById('contadorCarrito');
+
+const precioTotal = document.getElementById('precioTotal');
+
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0;
+    actualizarCarrito();
+})
+
+//Productos
+let stock = [
+    {id:1001, nombre:'Cupcake de frambuesa', precio: 250, categoria: 'Cupcakes'},
+    {id:1002, nombre:'Cupcake de vainilla y chips', precio: 250, categoria:'Cupcakes', img: '../img/cupcakes1.jpg'},
+    {id:1003, nombre:'Cupcake de limón', precio: 250, categoria: 'Cupcakes'},
+    {id:1004, nombre:'Cupcake de chocolate', precio:300, categoria: 'Cupcakes'},
+    {id:2001, nombre:'Alfajor de masa sablé', precio: 150, categoria: 'Alfajores'},
+    {id:2002, nombre:'Alfajor de chocolate', precio: 200, categoria: 'Alfajores'},
+    {id:2003, nombre:'Alfajor de maicena', precio: 150, categoria: 'Alfajores'},
+    {id:2004, nombre:'Alfajor de fruta', precio: 200, categoria: 'Alfajores'},
+    {id:3001, nombre:'Tarta de frutas', precio: 750, categoria: 'Tartas'},
+    {id:3002, nombre:'Lemon Pie', precio: 650, categoria: 'Tartas'},
+    {id:3003, nombre:'Pastafrola', precio: 600, categoria: 'Tartas'},
+    {id:3004, nombre:'Tarta de coco', precio: 600, categoria: 'Tartas'},
+    {id:4001, nombre:'Cañones de dulce de leche', precio:100, categoria: 'Masas Finas'},
+    {id:4002, nombre:'Bombas de crema', precio: 100, categoria: 'Masas Finas'},
+    {id:4003, nombre:'Macarons', precio: 150, categoria: 'Masas Finas'},
+    {id:4004, nombre:'Petit fours', precio: 150, categoria: 'Masas Finas'},
+];
 
 let carrito = [];
 
-class Producto {
-    constructor(id, nombre, precio, categoria) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.categoria = categoria;
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito();
     }
-}
+});
 
-
-let productos = [
-    new Producto(1001, 'Cupcake de frambuesa', 250, 'Cupcakes'),
-    new Producto(1002, 'Cupcake de vainilla y chips', 250, 'Cupcakes'),
-    new Producto(1003, 'Cupcake de limón', 250, 'Cupcakes'),
-    new Producto(1004, 'Cupcake de chocolate', 300, 'Cupcakes'),
-
-    new Producto(2001, 'Alfajor de masa sablé', 150, 'Alfajores'),
-    new Producto(2002, 'Alfajor de chocolate', 200, 'Alfajores'),
-    new Producto(2003, 'Alfajor de maicena', 150, 'Alfajores'),
-    new Producto(2004, 'Alfajor de fruta', 200, 'Alfajores'),
-
-    new Producto(3001, 'Tarta de frutas', 750, 'Tartas'),
-    new Producto(3002, 'Lemon Pie', 650, 'Tartas'),
-    new Producto(3003, 'Pastafrola', 600, 'Tartas'),
-    new Producto(3004, 'Tarta de coco', 600, 'Tartas'),
-
-    new Producto(4001, 'Cañones de dulce de leche', 100, 'Masas Finas'),
-    new Producto(4002, 'Bombas de crema', 100, 'Masas Finas'),
-    new Producto(4003, 'Macarons', 150, 'Masas Finas'),
-    new Producto(4004, 'Petit fours', 150, 'Masas Finas'),
-
-];
-
-productos.forEach((producto) => {
+stock.forEach((producto) => {
     const div = document.createElement('div');
     div.classList.add('producto');
     div.innerHTML = `
+    <img src ${producto.img} alt ="">
     <h3>${producto.nombre}</h3>
     <p class = "precioProducto">Precio:$ ${producto.precio}</p>
     <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class= fas fa-shopping cart"></button>
     `
+    seccionProductos.appendChild(div);
 
-    containerCupcakes.appendChild(div);
+    const boton = document.getElementById(`agregar${producto.id}`)
+
+    boton.addEventListener('click', () => {
+        agregarAlCarrito(producto.id);
+    })
 
 })
 
-const boton = document.getElementById("agregar${producto.id}");
-
-boton.addEventListener('click', () => {
-agregarProductos(producto.id);
-})
-
-const agregarProductos = (prodId) => {
-    const item = productos.find((prod) => prod.id === prodId)
+//Agregar al carrito
+const agregarAlCarrito = (prodId) => {
+    const existe = carrito.some(prod => prod.id === prodId)
+    const item = stock.find ((prod) => prod.id === prodId)
     carrito.push(item);
-    console.log(carrito)
-};
+    actualizarCarrito();
+}
+
+//Actualizar carrito
+const actualizarCarrito = () => {
+    contenedorCarrito.innerHTML = "";
+
+    carrito.forEach((prod) => {
+        const div = document.createElement('div');
+        div.className = ('productoEnCarrito');
+        div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+        `
+
+        contenedorCarrito.appendChild(div);
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    })
+
+    contadorCarrito.innerText = carrito.length;
+
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0);
+}
+
+//Eliminar del carrito
+const eliminarDelCarrito = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId)
+    const indice = carrito.indexOf(item);
+    carrito.splice(indice, 1);
+    actualizarCarrito();
+}
 
 //PROBAR METODO REDUCE (DIAPO 25 DE CLASE 7)
 
@@ -80,3 +119,5 @@ for (const producto of productos) {
                             <b> $ ${producto.precio}</b>`;
   document.body.appendChild(contenedor);
 } */
+
+//Considerar Toastify para dejar un mensaje de confirmación de compra
