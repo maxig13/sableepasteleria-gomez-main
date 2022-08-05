@@ -102,6 +102,14 @@ const eliminarDelCarrito = (prodId) => {
     actualizarCarrito();
 }
 
+function vaciarCarrito() {
+    Swal.fire({
+      title: "Carrito vaciado!",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    });
+}
+
 //PROBAR METODO REDUCE (DIAPO 25 DE CLASE 7)
 
 /* const productos = [
@@ -121,3 +129,5 @@ for (const producto of productos) {
 } */
 
 //Considerar Toastify para dejar un mensaje de confirmación de compra
+
+
