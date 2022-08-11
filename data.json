@@ -1,0 +1,18 @@
+[
+    {"id":1001, "nombre":"Cupcake de frambuesa", "precio": 250, "categoria": "Cupcakes"},
+    {"id":1002, "nombre":"Cupcake de vainilla y chips", "precio": 250, "categoria":"Cupcakes", "img": "../img/cupcakes1.jpg"},
+    {"id":1003, "nombre":"Cupcake de limón", "precio": 250, "categoria": "Cupcakes"},
+    {"id":1004, "nombre":"Cupcake de chocolate", "precio":300, "categoria": "Cupcakes"},
+    {"id":2001, "nombre":"Alfajor de masa sablé", "precio": 150, "categoria": "Alfajores"},
+    {"id":2002, "nombre":"Alfajor de chocolate", "precio": 200, "categoria": "Alfajores"},
+    {"id":2003, "nombre":"Alfajor de maicena", "precio": 150, "categoria": "Alfajores"},
+    {"id":2004, "nombre":"Alfajor de fruta", "precio": 200, "categoria": "Alfajores"},
+    {"id":3001, "nombre":"Tarta de frutas", "precio": 750, "categoria": "Tartas"},
+    {"id":3002, "nombre":"Lemon Pie", "precio": 650, "categoria": "Tartas"},
+    {"id":3003, "nombre":"Pastafrola", "precio": 600, "categoria": "Tartas"},
+    {"id":3004, "nombre":"Tarta de coco", "precio": 600, "categoria": "Tartas"},
+    {"id":4001, "nombre":"Cañones de dulce de leche", "precio":100, "categoria": "Masas Finas"},
+    {"id":4002, "nombre":"Bombas de crema", "precio": 100, "categoria": "Masas Finas"},
+    {"id":4003, "nombre":"Macarons", "precio": 150, "categoria": "Masas Finas"},
+    {"id":4004, "nombre":"Petit fours", "precio": 150, "categoria": "Masas Finas"}
+]
