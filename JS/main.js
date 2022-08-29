@@ -10,6 +10,10 @@ const contadorCarrito = document.getElementById('contadorCarrito');
 
 const precioTotal = document.getElementById('precioTotal');
 
+const cantidad = document.getElementById('cantidad')
+
+const cantidadTotal = document.getElementById('cantidadTotal')
+
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0;
     actualizarCarrito();
@@ -71,8 +75,16 @@ fetch('../data.json')
 //Agregar al carrito
 const agregarAlCarrito = (prodId) => {
     const existe = carrito.some(prod => prod.id === prodId)
-    const item = stock.find ((prod) => prod.id === prodId)
-    carrito.push(item);
+    if (existe){
+        const prod = carrito.map(prod => {
+            if (prod.id === prodId) {
+                prod.cantidad++
+                }
+            })
+        } else {
+            const item = stock.find ((prod) => prod.id === prodId)
+            carrito.push(item);
+          }
     actualizarCarrito();
 }
 
